@@ -1,11 +1,13 @@
 eureka:
   client:
     service-url:
-      #指定注册中心的地址#
       defaultZone: http://localhost:8761/eureka/
 server:
-  port: 8762
+  port: 8081
 spring:
   application:
-    #服务的名字#
-    name: eurekaclient
+    name: feign
+#开启熔断器#
+feign:
+  hystrix:
+    enabled: true

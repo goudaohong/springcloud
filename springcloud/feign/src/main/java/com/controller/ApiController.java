@@ -1,16 +1,17 @@
 package com.controller;
 
-import org.springframework.beans.factory.annotation.Value;
+import com.service.ApiService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HelloController {
+public class ApiController {
+    @Autowired
+    private ApiService apiService;
 
-    @Value("${server.port}")
-    private int port;
     @RequestMapping("index")
     public String index(){
-        return "Hello World,端口："+ port;
+        return apiService.index();
     }
 }

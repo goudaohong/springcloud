@@ -1,4 +1,4 @@
-package application;
+package com;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
@@ -6,8 +6,8 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringCloudApplication
 @EnableEurekaServer
-public class Application {
+public class ServerApplication {
     public static void main(String[] args){
-        SpringApplication.run(Application.class,args);
+        SpringApplication.run(ServerApplication.class,args);
     }
 }
